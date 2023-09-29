@@ -29,3 +29,8 @@ Instalar las dependencias:
 
     $ pip install -r requirements.txt
   
+---
+
+Fuentes:
+
++ https://py-pde.readthedocs.io/en/latest/index.html

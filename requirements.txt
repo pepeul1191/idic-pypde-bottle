@@ -1,0 +1,6 @@
+py-pde
+h5py
+pandas
+pyfftw
+tqdm
+bottle
