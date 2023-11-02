@@ -57,6 +57,7 @@ if __name__ == '__main__':
       host='192.168.1.27', 
       port=8080, 
       debug=True,
+      server='cherrypy',
       reloader=True
     )
 
