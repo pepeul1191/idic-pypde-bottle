@@ -13,7 +13,7 @@ Instalar virtualenv en el sistema (Linux y/o Windows):
 
 Crear ambiente virtual en el proyecto (Linux y/o Windows):
 
-    $ virtualenv -p python3 env
+    $ python3 -m venv env
 
 Activar el ambiente virtual:
 

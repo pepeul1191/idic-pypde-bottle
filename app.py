@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 from pde import CylindricalSymGrid, ScalarField
 from bottle import Bottle, static_file, response, request
 
-
-
 def generate_random_string(length):
   characters = string.ascii_letters + string.digit
   random_string = ''.join(random.choice(characters) for _ in range(length))
