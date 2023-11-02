@@ -45,7 +45,7 @@ def serve_image():
     return 'Image not found'
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8080, debug=True)
+    app.run(host='192.168.1.27', port=8080, debug=True)
 
 
 '''
