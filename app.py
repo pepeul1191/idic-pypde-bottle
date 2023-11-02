@@ -1,8 +1,8 @@
 import random
 import string
+from bottle import Bottle, static_file, response, request, template
 import matplotlib.pyplot as plt
 from pde import CylindricalSymGrid, ScalarField
-from bottle import Bottle, static_file, response, request
 
 def generate_random_string(length):
   characters = string.ascii_letters + string.digit
@@ -13,8 +13,18 @@ app = Bottle()
 
 @app.route('/<filename>')
 def serve_image(filename):
-    # Replace 'path_to_your_image_folder' with the actual path to your image files
-    return static_file(filename, root='static')
+  # Replace 'path_to_your_image_folder' with the actual path to your image files
+  return static_file(filename, root='static')
+
+@app.route('/')
+def home():
+  # Replace 'path_to_your_image_folder' with the actual path to your image files
+  locals = {
+    'title': 'Python PDE + Bottle',
+    'content': 'Aplicación Web en Bottle con PyPDE'
+  }
+  return template('home', locals)
+
 
 @app.route('/image')
 def serve_image():
@@ -43,7 +53,12 @@ def serve_image():
     return 'Image not found'
 
 if __name__ == '__main__':
-    app.run(host='192.168.1.27', port=8080, debug=True)
+    app.run(
+      host='192.168.1.27', 
+      port=8080, 
+      debug=True,
+      reloader=True
+    )
 
 
 '''
